@@ -45,9 +45,9 @@ def split_dataset(dataset_path, dest_path, train_split_ratio : float):
 if __name__ == "__main__":
     # Set up the command-line argument parser
     parser = argparse.ArgumentParser(description="Split an image classification dataset into training and test sets.")
-    parser.add_argument("dataset_path", type=str, help="Path to the classification dataset folder.")
-    parser.add_argument("dest_path", type=str, help="Path to the destination folder where the split datasets will be saved.")
-    parser.add_argument("train_split_ratio", type=float, required=False, default=0.9, help="Ratio of the dataset to use for training (between 0 and 1).")
+    parser.add_argument("--dataset-path", type=str, help="Path to the classification dataset folder.")
+    parser.add_argument("--dest-path", type=str, help="Path to the destination folder where the split datasets will be saved.")
+    parser.add_argument("--train-split-ratio", type=float, required=False, default=0.9, help="Ratio of the dataset to use for training (between 0 and 1).")
 
     # Parse the command-line arguments
     args = parser.parse_args()
